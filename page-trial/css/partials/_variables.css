@@ -1,0 +1,15 @@
+
+:root{
+    --primary-color: #5A5050;
+    --primary-color2: #E5EEC1;
+    --title-color: #A2D4AB;
+    --text-color: #3EACA8;  
+    --border-color: #547A82;  
+    --gradient-color: linear-gradient(180deg, #E5EEC1 0%, #5A5050 100%);
+    --shadow-color:  0px 10px 30px rgba(#E5EEC1 0.3);
+    --box-shadow: 0px 10px 30px rgba(#547A82 0.205);
+   
+
+    /* font family variables. */ 
+    --quicksand: 'Quicksand';
+} 
