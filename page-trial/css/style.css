@@ -37,11 +37,11 @@
 /*start banner*/
 .site-main .site-banner {
     background: var(--primary-color);
-    padding: 3rem;
+    padding: 1rem;
 }
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 15%;
     font-weight: 500;
 }
 
@@ -56,20 +56,15 @@
 }
 
 .site-main .site-banner .site-title h1{
-    font-size: 5rem;
-    padding-top: 1rem;
+    font-size: 3.5rem;
     color: var(--primary-color2);
 }
 
 .site-main .site-banner .site-title h4{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--primary-color2);
 }
 
-.site-main .site-banner .banner-image > img{
-    padding: 7rem 0;
-    width: 90rem;
-}
 .site-main .site-banner .site-title span.you-span{
     text-shadow: 2px 2px black;
 }
