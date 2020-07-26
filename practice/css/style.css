@@ -36,6 +36,26 @@ p{
     font-weight: 300px;
     letter-spacing: .05rem;
 }
+
+.cta{
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+
 .section-title{
     font-size: 4rem;
     font-weight: 300;
@@ -94,24 +114,7 @@ p{
     animation:text_reveal_box 1s ease;
     animation-delay: 1s;
 }
-.cta{
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	margin-top: 30px;
-	transition: .3s ease;
-	transition-property: background-color, color;
-}
 
-.cta:hover {
-	color: white;
-	background-color: crimson;
-}
 
     /*Keyframes box*/
     @keyframes text_reveal_box{
@@ -277,3 +280,103 @@ p{
     transform: scale(1.1);
 }
 /*End Project Section*/
+
+/*Start about section*/
+
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-left{
+    width: 360px;
+    height: 360px;
+}
+
+
+#about .col-right{
+    width: 100%;
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p{
+    margin-bottom: 20px;
+}
+
+#about .col-right .cta{
+    color:black;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size:2rem;
+}
+
+#about .col-left .about-img{
+    height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#about .col-left .about-img::after{
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid crimson;
+	z-index: -1;
+}
+/*End about section*/
+
+/*Start Contact Section*/
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact .contact-items{
+    width: 400px;
+    padding: 20px;
+}
+#contact .contact .contact-items .contact-item{
+    display: flex;
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: .3s ease box-shadow;
+    flex-direction: column;
+}
+#contact .contact .contact-items .contact-item:hover{
+    box-shadow: 0px 0px 5px 0px #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/*End Contact Section*/
