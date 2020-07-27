@@ -9,6 +9,7 @@
 
 html {
     font: normal 500 10px 'Quicksand';
+    background-color: black;
 }
 
 a {
@@ -30,9 +31,9 @@ img {
 }
 
 p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-top: 5px;
-    color: black;
+    color: white;
     line-height: 2.5rem;
     font-weight: 300px;
     letter-spacing: .05rem;
@@ -60,7 +61,7 @@ p {
 .section-title {
     font-size: 4rem;
     font-weight: 300;
-    color: black;
+    color: crimson;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -84,7 +85,115 @@ p {
 .brand-title span {
     color: crimson;
 }
+/*Header section*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: auto;
+}
 
+#header .header{
+    min-height: 5vh;
+    background-color: rgba(31, 30, 30, 0.9);
+    border-bottom: 1px crimson solid;
+    transition: .3s ease background-color;
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+#header .nav-list ul{
+    list-style:none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+    
+}
+#header .nav-list ul.active{
+    left: 0;
+}
+#header .nav-list ul a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .nav-list li:hover a{
+    color: crimson;
+    transition: .3s ease color;
+}
+#header .hamburger{
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+}
+#header .hamburger .bar{
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .hamburger .bar::after, 
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after{
+    top:8px;
+}
+#header .hamburger .bar::before{
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before
+{
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+/*End Header Section*/
 /*Hero Section*/
 #hero {
     background-image: url(../img/hero-bg.png);
@@ -157,20 +266,29 @@ p {
     }
 }
 
+/*Keyframes text reveal red*/
+@keyframes text_reveal_red {
+    100% {
+        color: crimson;
+    }
+}
+
 /*End Keyframe Text Reveal*/
 /*End Hero Section*/
 
 /*Start Service Section*/
+#services{
+    border-bottom: 2px crimson solid;
+}
 #services .services {
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 30px 0;
 }
 
 #services .service-top p {
-    font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
     font-weight: 300px;
@@ -208,7 +326,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, black 0%, crimson 100%);
     opacity: .4;
     z-index: -1;
 }
@@ -234,15 +352,15 @@ p {
 /*End Service Section*/
 
 /*Start Project Section*/
-* Projects section */
+#projects{
+    margin-top: 50px;
+    border-bottom: crimson 2px solid;
+}
+
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 0;
-}
-#projects .projects-header h1 {
-	margin-bottom: 50px;
 }
 #projects .all-projects {
 	display: flex;
@@ -268,7 +386,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, black 0%, crimson 100%);
 	color: white;
 }
 #projects .project-info h1 {
@@ -309,41 +427,96 @@ p {
 /*End Project Section*/
 
 /*Start about section*/
-
+#about{
+    /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
+    background-image: url(../img/img-3.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    border-bottom: crimson 2px solid;
+}
 #about .about {
     flex-direction: column-reverse;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px;
+    position: relative;
+    z-index: 0;
 }
-
+#about:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
 #about .col-left {
-    width: 360px;
-    height: 360px;
+    display:none;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    z-index: 0;
 }
 
 
 #about .col-right {
     width: 100%;
+    position: relative;
 }
 
 #about .col-right h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 500;
     letter-spacing: .2rem;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
+    color: white;
 }
-
+#about .col-right h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.3s;
+}
+#about .col-right h1 .red-text{
+    display: inline;
+    font-size: 4rem;
+    color: transparent;
+    animation: text_reveal_red .5s ease forwards;
+    animation-delay: 1.3s;
+}
+#about .col-right h1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
 #about .col-right p {
     margin-bottom: 20px;
+    position: relative;
+    color: white;
 }
 
 #about .col-right .cta {
-    color: black;
+    color: white;
     margin-bottom: 30px;
     padding: 10px 20px;
     font-size: 2rem;
+    position: relative;
 }
 
 #about .col-left .about-img {
@@ -351,6 +524,7 @@ p {
     width: 100%;
     position: relative;
     border: 10px solid white;
+    
 }
 
 #about .col-left .about-img::after {
@@ -369,7 +543,7 @@ p {
 
 /*Start Footer Section*/
 #footer {
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, crimson 0%, black 20%);
 }
 
 #footer .footer {
@@ -466,6 +640,7 @@ p {
 		flex-direction: row;
 	}
 	#about .col-left {
+        display:block;
 		width: 600px;
 		height: 400px;
 		padding-left: 60px;
@@ -496,7 +671,10 @@ p {
 	/* header */
 	#header .hamburger {
 		display: none;
-	}
+    }
+    #header .nav-list ul .brand-title{
+        display: none;
+    }
 	#header .nav-list ul {
 		position: initial;
 		display: block;
