@@ -9,7 +9,7 @@
 
 html {
     font: normal 500 10px 'Quicksand';
-    background-color: black;
+    background-color: #1c1c1c;
 }
 
 a {
@@ -61,7 +61,7 @@ p {
 .section-title {
     font-size: 4rem;
     font-weight: 300;
-    color: crimson;
+    color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: .2rem;
@@ -210,7 +210,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #1c1c1c;
     opacity: .7;
     z-index: -1;
 }
@@ -326,7 +326,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(60deg, black 0%, crimson 100%);
+    background-image: linear-gradient(60deg, #1c1c1c 0%, crimson 100%);
     opacity: .4;
     z-index: -1;
 }
@@ -353,16 +353,20 @@ p {
 
 /*Start Project Section*/
 #projects{
-    margin-top: 50px;
+    margin-top: 20px;
     border-bottom: crimson 2px solid;
 }
 
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
-	margin: 0 auto;
+    margin: 0 auto;
+}
+#projects .section-title{
+    margin-bottom: 0;
 }
 #projects .all-projects {
+    margin-top: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -374,7 +378,7 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	width: 80%;
-	margin: 20px auto;
+	margin: 0 auto;
 	overflow: hidden;
 	border-radius: 10px;
 }
@@ -386,7 +390,7 @@ p {
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	background-image: linear-gradient(60deg, black 0%, crimson 100%);
+	background-image: linear-gradient(60deg, #1c1c1c 0%, crimson 100%);
 	color: white;
 }
 #projects .project-info h1 {
@@ -441,9 +445,13 @@ p {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 90px 20px 0px 20px;
     position: relative;
     z-index: 0;
+}
+#about .container{
+    min-height: 0;
+    margin-bottom: 10px;
 }
 #about:after {
     content: '';
@@ -452,7 +460,7 @@ p {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: #1c1c1c;
     opacity: .7;
     z-index: -1;
 }
@@ -481,8 +489,8 @@ p {
 }
 #about .col-right h1 {
     display: block;
-    width: fit-content;
-    font-size: 4rem;
+    text-align: center;
+    font-size: 6rem;
     position: relative;
     color: transparent;
     animation: text_reveal .5s ease forwards;
@@ -490,7 +498,7 @@ p {
 }
 #about .col-right h1 .red-text{
     display: inline;
-    font-size: 4rem;
+    font-size: 6rem;
     color: transparent;
     animation: text_reveal_red .5s ease forwards;
     animation-delay: 1.3s;
@@ -506,8 +514,10 @@ p {
     animation-delay: 1s;
 }
 #about .col-right p {
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0 ;
     position: relative;
+    padding: 0 10%;
     color: white;
 }
 
@@ -520,30 +530,22 @@ p {
 }
 
 #about .col-left .about-img {
-    height: 100%;
-    width: 100%;
+    height: 82%;
+    width: 110%;
     position: relative;
+    margin-top: 70px;
+    margin-left: 15px;
     border: 10px solid white;
     
 }
 
-#about .col-left .about-img::after {
-    content: '';
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid crimson;
-    z-index: -1;
-}
 
 /*End about section*/
 
 
 /*Start Footer Section*/
 #footer {
-    background-image: linear-gradient(60deg, crimson 0%, black 20%);
+    background-image: linear-gradient(60deg, crimson 0%, #1c1c1c 20%);
 }
 
 #footer .footer {
@@ -638,27 +640,17 @@ p {
 	/* About */
 	#about .about {
 		flex-direction: row;
-	}
-	#about .col-left {
-        display:block;
-		width: 600px;
-		height: 400px;
-		padding-left: 60px;
-	}
-	#about .about .col-left .about-img::after {
-		left: -45px;
-		top: 34px;
-		height: 98%;
-		width: 98%;
-		border: 10px solid crimson;
-	}
+    }
+
 	#about .col-right {
-		text-align: left;
-		padding: 30px;
+		text-align: center;
+		
 	}
-	#about .col-right h1 {
-		text-align: left;
-	}
+    #about .col-right p{
+        padding: 0;
+       
+        text-align: center;
+    }
 	/* End About */
 
 	
@@ -696,7 +688,23 @@ p {
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
-	}
+    }
+    #about .col-left {
+        display:block;
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+    }
+    #about .col-right p{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    #about .col-right h1{
+        font-size: 6rem;
+    }
+    #about .col-right h1 .red-text{
+        font-size: 6rem;
+    }
 }
 /* End  Media Query For Desktop */
 
