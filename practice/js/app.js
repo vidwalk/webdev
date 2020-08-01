@@ -7,3 +7,17 @@ hamburger.addEventListener('click',()=>{
     mobile_menu.classList.toggle('active');
 })
 
+    //owl-carousel init
+    $('#about .about .owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            560: {
+                items: 2
+            }
+        }
+    })
