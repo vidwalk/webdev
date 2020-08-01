@@ -453,7 +453,7 @@ p {
 }
 #about::after{
     content: '';
-    background-image: url(../img/img-3.png);
+    background-image: url(../img/img-4.png);
     background-size: cover;
     background-position: top center;
     opacity: 0.3;
@@ -466,7 +466,6 @@ p {
 }
 #about .about {
     flex-direction: column-reverse;
-    text-align: center;
     max-width: 1300px;
     margin: 0 auto;
     padding: 90px 0px 0px 0px;
@@ -491,13 +490,15 @@ p {
 #about .col-right {
     width: 100%;
     position: relative;
-    
+    height: auto;
+    margin-top: 10%;
+    padding-left: 30px;
 }
 
 
 #about .col-right h1 {
     display: block;
-    text-align: center;
+    text-align: left;
     font-size: 6rem;
     position: relative;
     color: transparent;
@@ -522,7 +523,7 @@ p {
     animation-delay: 1s;
 }
 #about .col-right p {
-    text-align: center;
+    text-align: left;
     margin: 20px 0 ;
     position: relative;
     color: white;
@@ -546,40 +547,6 @@ p {
 }
 
 
-#about .about .col-left .owl-carousel .owl-item{
-    display: flex;
-    justify-content: center;
-   background:crimson;
-   margin-left: 30px;
-   border-radius: 10px;
-}
-#about .about .col-left .owl-carousel .owl-item h2{
-    color:white;
-}
-#about .about .col-left .owl-carousel .owl-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(60deg, #1c1c1c 0%, crimson 100%);
-    opacity: .9;
-    z-index: -1;
-}
-#about .about .col-left .owl-carousel .owl-dots .owl-dot.active span{
-    background:crimson;
-    width: 12px;
-    height: 12px;
-}
-
-#about .about .client {
-    align-content: center;
-    
-}
-#about .about .client .client-img .img-fluid{
-    height: 100px;
-}
 
 /*End about section*/
 
@@ -684,34 +651,19 @@ p {
         padding: 0;
         border-bottom: solid 2px crimson;
     }
-    #about::after{
+    .about::after{
         background-image: none;
     }
-    #about .col-left {
-        display:block;
-       
-        width: 600px;
-        height: 1px;
-		align-items: top center;
-    }
-    #about .col-left .owl-item p{
-        font-size: 1rem;
-    }
 	#about .col-right {
-        
-		text-align: center;
+        padding-left: 7%;
+		text-align: left;
 	}
-    #about .col-right p{
-        padding: 0;
-       
-        text-align: center;
-    }
 	/* End About */
     #about .col-right p {
-        text-align: center;
+        text-align: left;
         margin: 20px 0 ;
         position: relative;
-        
+        padding: 0;
         color: white;
     }
     #about .col-right h2 {
@@ -735,7 +687,7 @@ p {
     }
 	#about .col-right h1 {
         display: block;
-        text-align: center;
+        text-align: left;
         font-size: 6rem;
         position: relative;
         color: transparent;
@@ -787,11 +739,8 @@ p {
         right: 60px;
         background-color: transparent;
     }
-    #about .col-left {
-        display:block;
-		width: 500px;
-		height: 300px;
-		align-items: center;
+    #about .col-right{
+        padding-left: 6.8%;
     }
     #about .col-right p{
         margin: 0;
@@ -803,17 +752,8 @@ p {
     #about .col-right h1 .red-text{
         font-size: 6rem;
     }
-    #about::after{
-        background-image: url(../img/img-3.png);
-        background-position-x: 40%;
-    }
-    #about::after{
-        background-position-x: 52%;
-    }
-    #about .about .client {
-        align-content: center;
-        width: auto;
-        height: auto;
+    .about::after{
+        background-image: url(../img/img-4.png);
         
     }
     
@@ -846,15 +786,12 @@ p {
         font-size: 4rem;
     }
     #about .about {
-        text-align: center;
+        text-align: left;
         max-width: 2100px;
         margin: 0 auto;
         padding: 100px 20px 0px 20px;
         position: relative;
         z-index: 0;
-    }
-    #about::after{
-        background-position-x: -730px;
     }
     #about .col-left {
         display:block;
@@ -864,10 +801,8 @@ p {
         height: 675px;
         
     }
-    #about .col-right {
-        width: 60%;
-        position: relative;
-        padding-left: 70px;
+    #about .col-right{
+        padding-left: 1.8%;
     }
     #about .col-right .section-title {
         top:-25px;
