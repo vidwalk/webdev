@@ -15,6 +15,7 @@
     top: 0;
     width: 100vw;
     height: auto;
+    
 }
 
 #header .header {
@@ -49,7 +50,6 @@
     z-index: 1;
     overflow-x: hidden;
     transition: .5s ease left;
-
 }
 
 #header .nav-list ul.active {
@@ -457,17 +457,19 @@
     border-bottom: 2px crimson solid;
 }
 
-#contact .contact {
+#contact .contact {  
     flex-direction: column;
     text-align: left;
     max-width: 1300px;
-    margin: 0 auto;
+    
     padding: 30px 0;
 }
 #contact .container{
+    padding-top:80px;
     display: flex;
     align-items: left;
     justify-content: left;
+    margin-left: 20px;
 }
 #contact .section-title {
     margin-left: 40px;
@@ -483,31 +485,42 @@
     width: 80%;
 }
 
-#contact .contact-bottom {
-    margin-top: 10px;
-    max-width: 1300px;
-}
 #contact .contact-bottom .form {
     clear: both;
-    width: 300px;
+    width: 100%;
+    
 }
 #contact .contact-bottom .form .email-input{
     clear: both;
-    width: 300px;
+    width: 80%;
     padding: 5px;
     font-size: 1.5rem;
 }
 #contact .contact-bottom .form .message-input{
-    width: 300px;
+    width: 80%;
     font-size: 1.5rem;
     text-align: left;   
     resize: none;
 }
 #contact .contact-bottom .form .cta{
-    width: 300px;
+    width: 80%;
 }
 #contact .contact-bottom .form label{
     margin-top: 40px;
+}
+
+#contact .contact-top .section-title{
+    margin-left: 20px;
+}
+#contact .contact-top  p{
+    margin-left: 20px;
+    
+}
+#contact .contact-bottom {
+    margin-top: 10px;
+    width: 100%;
+    margin-left: 40px;
+    
 }
 
 /*End contact section*/
@@ -533,7 +546,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+#footer .footer .brand-title{
+    margin: 0 auto;
+}
 #footer .footer .social-icon {
     display: flex;
     margin-bottom: 30px;
@@ -668,6 +683,20 @@
         animation-delay: 1.3s;
 
     }
+    #contact .container{
+        margin: 0 auto;
+    }
+    #contact .contact-top .section-title{
+        margin-left: 20px;
+    }
+    #contact .contact-top  p{
+        margin-left: 20px;
+    }
+    #contact .contact-bottom {
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 40px;
+    }
 }
 
 /* End Media Query For Tablet */
@@ -753,7 +782,6 @@
     #services .section-title {
         margin-left: 20px;
     }
-
     #services .service-top p {
         margin-left: 20px;
     }
@@ -879,12 +907,12 @@
 
     #services .services {
         max-width: 2100px;
-        margin-left: 220px;
+        margin-left: 200px;
     }
 
     #services .section-title {
         font-size: 8rem;
-        margin-left: 40px;
+        
     }
 
     #services .service-top p {
@@ -894,8 +922,8 @@
         font-weight: 300px;
         letter-spacing: .05rem;
         text-align: left;
-        margin-left: 40px;
-        width: 90%;
+        
+        width: 100%;
     }
 
     #services .service-bottom {
@@ -942,7 +970,36 @@
         font-size: 4rem;
         line-height: 55px;
     }
+    /*Start Contact Section*/
+    #contact .section-title {
+        font-size: 8rem;
+        margin-left: 40px;
+    }
 
+    #contact .contact {
+        max-width: 2100px;
+        margin-left: 200px;
+    }
+
+    #contact .contact-top{
+        width: 100%;
+    }
+
+    #contact .contact  p{
+        font-size: 4rem;
+        line-height: 55px;
+    }
+
+    #contact .contact .cta{
+        font-size: 4rem;
+    }
+
+    #contact .contact .contact-bottom .email-input {
+        font-size: 4rem;
+    }
+    #contact .contact .contact-bottom .message-input {
+        font-size: 4rem;
+    }
     /*Start Footer Section*/
 
     #footer .footer {

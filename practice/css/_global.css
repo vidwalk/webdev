@@ -2,12 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
-html {
+    
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
     font: normal 500 10px 'Quicksand';
     background-color: #1c1c1c;
 }
+
 
 a {
     text-decoration: none;
@@ -91,11 +96,19 @@ label{
     margin-bottom: 10px;
 }
 input:focus{
-    outline: solid #e7b3b3 4px;
+    outline: solid #948080 4px;
+    transition: .2s ease outline; 
+}
+input.active{
+    outline: solid red 2px;
     transition: .2s ease outline; 
 }
 textarea:focus{
-    outline: solid #e7b3b3 4px;
+    outline: solid #948080 4px;
+    transition: .2s ease outline; 
+}
+textarea.active{
+    outline: solid red 2px;
     transition: .2s ease outline; 
 }
 .error-para{
