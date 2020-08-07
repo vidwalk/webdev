@@ -1,0 +1,126 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 5fr 3fr 2fr;
+    grid-template-areas: 
+        "main   main   header"
+        "main   main   candy"
+        "nom    yum    candy"
+        "diabeetus diabeetus candy";
+    height: 100vh;
+}
+
+main {
+    grid-area: main;
+    background: #FFFADF;
+}
+
+section.nom {
+    grid-area: nom;
+    background: #C4B35A;
+}
+
+section.yum{
+    grid-area:yum;
+    background: #333333;
+}
+
+section.diabeetus{
+    grid-area: diabeetus;
+    background: #202020;
+}
+
+header{
+    grid-area: header;
+}
+
+.candy{
+    grid-area: candy;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg') no-repeat;
+
+    background-size: cover;
+}
+/*Main Section*/
+.title-section,.logo-section,.text-section{
+    margin-left: 100px;
+}
+.logo-section{
+    margin-top: 30px;
+}
+
+.title-section{
+    margin-top: 60px;
+}
+
+.text-section{
+    margin-top: 15px;
+    padding-right: 150px;
+}
+.logo-section{
+    color: rgb(253, 108, 132);
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.title-section h2{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 40px;
+}
+.text-section p{
+    line-height: 28px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+/*End Main Section*/
+
+/*Nom nom and Yum Section*/
+.nom,.yum{
+    text-align: center;
+    display: inline-block;
+    display: flex;
+}
+.nom h4,.yum h4{
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.nom h4::before,
+.nom h4::after, .yum h4::before,
+.yum h4::after{
+    align-items: center;
+    content: "";
+    border: .05rem solid white;
+    width: 6.2rem;
+    margin: 0 25px;
+}
+/*End Nom nom and Yum Section*/
+
+/*Diabeetus Section*/
+.diabeetus{
+    text-align: center;
+    display: inline-block;
+    display: flex;
+}
+.diabeetus h4{
+    opacity: 30%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*Same as header section*/
+    margin-left: 100px;
+    display: flex;
+  align-items: center;
+    font-size: 1.5rem;
+}
+/*End Diabeetus Section*/
