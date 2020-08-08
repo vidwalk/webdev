@@ -43,9 +43,8 @@ header{
 
 .candy{
     grid-area: candy;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg') no-repeat;
-
-    background-size: cover;
+    background: url('candy.jpg') no-repeat;
+    background-size: 28em;
 }
 /*Main Section*/
 .title-section,.logo-section,.text-section{
@@ -100,7 +99,7 @@ header{
     align-items: center;
     content: "";
     border: .05rem solid white;
-    width: 6.2rem;
+    width: 6.4rem;
     margin: 0 25px;
 }
 /*End Nom nom and Yum Section*/
@@ -124,3 +123,31 @@ header{
     font-size: 1.5rem;
 }
 /*End Diabeetus Section*/
+
+/*Start header*/
+.nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: transparent;
+
+}
+
+.nav-list ul li {
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: 700;
+}
+.nav-list ul a:after {
+    display: none;
+}
+.nav-list ul a{
+    font-weight: 800;
+    text-decoration: none;
+    color: rgb(253, 108, 132);
+    padding: 20px;
+    display: block;
+}
+/*end header*/

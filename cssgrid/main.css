@@ -37,6 +37,6 @@ header{
 
 .candy{
     grid-area: 2/3/5/4;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/candy.jpg') no-repeat;
+    background: url('candy.jpg') no-repeat;
     background-size: cover;
 }
