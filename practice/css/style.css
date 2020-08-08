@@ -15,13 +15,13 @@
     top: 0;
     width: 100vw;
     height: auto;
-    
+
 }
 
 #header .header {
-    min-height: 5vh;
+    min-height: 1vh;
     background-color: rgba(31, 30, 30, 0.9);
-    border-bottom: 1px crimson solid;
+    border-bottom: 1px rgba(220, 20, 60, 0.1) solid;
     transition: .3s ease background-color;
 }
 
@@ -125,7 +125,7 @@
 
 #header .nav-bar .brand-title {
     margin-left: 0;
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 /*End Header Section*/
@@ -162,9 +162,6 @@
 /*End Keyframe Text Reveal*/
 
 /*Start Service Section*/
-#services {
-    border-bottom: 2px crimson solid;
-}
 
 #services .services {
     flex-direction: column;
@@ -220,7 +217,7 @@
     height: 100%;
     width: 100%;
     background-image: linear-gradient(60deg, #1c1c1c 0%, crimson 100%);
-    opacity: .9;
+    opacity: 0.95;
     z-index: -1;
 }
 
@@ -247,7 +244,7 @@
 /*Start Project Section*/
 #projects {
     margin-top: 20px;
-    border-bottom: crimson 2px solid;
+    
 }
 
 #projects .projects {
@@ -341,7 +338,7 @@
     /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
     position: relative;
     z-index: 1;
-    border-bottom: crimson 2px solid;
+    
     display: block;
     height: 100vh;
 }
@@ -454,23 +451,25 @@
 /*Start contact section*/
 
 #contact {
-    border-bottom: 2px crimson solid;
+    border-bottom: 1px rgba(220, 20, 60, 0.1) solid;
 }
 
-#contact .contact {  
+#contact .contact {
     flex-direction: column;
     text-align: left;
     max-width: 1300px;
-    
+
     padding: 30px 0;
 }
-#contact .container{
-    padding-top:80px;
+
+#contact .container {
+    padding-top: 80px;
     display: flex;
     align-items: left;
     justify-content: left;
     margin-left: 20px;
 }
+
 #contact .section-title {
     margin-left: 40px;
 }
@@ -486,43 +485,58 @@
 }
 
 #contact .contact-bottom .form {
-    clear: both;
-    width: 100%;
     
+    width: 100%;
+
 }
-#contact .contact-bottom .form .email-input{
-    clear: both;
+
+#contact .contact-bottom .form .email-input {
+    
     width: 80%;
     padding: 5px;
     font-size: 1.5rem;
 }
-#contact .contact-bottom .form .message-input{
+
+#contact .contact-bottom .form .message-input {
     width: 80%;
     font-size: 1.5rem;
-    text-align: left;   
+    text-align: left;
     resize: none;
 }
-#contact .contact-bottom .form .cta{
+
+#contact .contact-bottom .form .cta {
     width: 80%;
 }
-#contact .contact-bottom .form label{
+
+#contact .contact-bottom .form label {
     margin-top: 40px;
 }
 
-#contact .contact-top .section-title{
+#contact .contact-top .section-title {
     margin-left: 20px;
 }
-#contact .contact-top  p{
+
+#contact .contact-top p {
     margin-left: 20px;
-    
+
 }
+
 #contact .contact-bottom {
     margin-top: 10px;
     width: 100%;
     margin-left: 40px;
     
 }
-
+#contact .contact-bottom-right{
+    margin-top: 10px;
+    width: 80%;
+    text-align: left;
+    color: white;
+}
+#contact .contact-bottom .contact-bottom-right h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+}
 /*End contact section*/
 
 /*Start Footer Section*/
@@ -546,9 +560,11 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#footer .footer .brand-title{
+
+#footer .footer .brand-title {
     margin: 0 auto;
 }
+
 #footer .footer .social-icon {
     display: flex;
     margin-bottom: 30px;
@@ -632,7 +648,7 @@
     #about {
         height: 100vh;
         padding: 0;
-        border-bottom: solid 2px crimson;
+        
     }
 
     .about::after {
@@ -683,19 +699,52 @@
         animation-delay: 1.3s;
 
     }
-    #contact .container{
+
+    #contact .container {
         margin: 0 auto;
     }
-    #contact .contact-top .section-title{
+
+    #contact .contact-top .section-title {
         margin-left: 20px;
     }
-    #contact .contact-top  p{
+
+    #contact .contact-top p {
+        width: 95%;
         margin-left: 20px;
+    }
+
+    #contact .contact-bottom {
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 40px;
+    }
+    #contact .contact-bottom .form .email-input,
+    #contact .contact-bottom .form .message-input,
+    #contact .contact-bottom .form .cta {
+        width: 80%;
     }
     #contact .contact-bottom {
         margin-top: 10px;
         width: 100%;
         margin-left: 40px;
+        display: flex;
+    }
+    #contact .contact-bottom .contact-bottom-left{
+        flex: 50%;
+    }
+    #contact .contact-bottom .contact-bottom-right{
+        
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        flex: 50%;
+        color: white;
+        
+    }
+    #contact .contact-bottom .contact-bottom-right h2{
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -782,20 +831,33 @@
     #services .section-title {
         margin-left: 20px;
     }
+
     #services .service-top p {
         margin-left: 20px;
     }
-    #contact .contact-top .section-title{
+
+    #contact .contact-top .section-title {
         margin-left: 20px;
     }
-    #contact .contact-top  p{
+
+    #contact .contact-top p {
         margin-left: 20px;
-        
+
     }
+
     #contact .contact-bottom {
         margin-top: 10px;
         width: 100%;
         margin-left: 40px;
+    }
+
+    #contact .contact-bottom .form .email-input,
+    #contact .contact-bottom .form .message-input,
+    #contact .contact-bottom .form .cta {
+        width: 50%;
+    }
+    #contact .contact-bottom .contact-bottom-right h2{
+        font-size: 2.2rem;
     }
 }
 
@@ -912,7 +974,7 @@
 
     #services .section-title {
         font-size: 8rem;
-        
+
     }
 
     #services .service-top p {
@@ -922,7 +984,7 @@
         font-weight: 300px;
         letter-spacing: .05rem;
         text-align: left;
-        
+
         width: 100%;
     }
 
@@ -970,6 +1032,7 @@
         font-size: 4rem;
         line-height: 55px;
     }
+
     /*Start Contact Section*/
     #contact .section-title {
         font-size: 8rem;
@@ -981,24 +1044,49 @@
         margin-left: 200px;
     }
 
-    #contact .contact-top{
+    #contact .contact-top {
         width: 100%;
     }
 
-    #contact .contact  p{
+    #contact .contact p {
         font-size: 4rem;
         line-height: 55px;
     }
 
-    #contact .contact .cta{
+    #contact .contact .cta {
         font-size: 4rem;
     }
 
     #contact .contact .contact-bottom .email-input {
         font-size: 4rem;
     }
+
     #contact .contact .contact-bottom .message-input {
         font-size: 4rem;
+    }
+
+    #contact .contact-bottom .form .email-input,
+    #contact .contact-bottom .form .message-input,
+    #contact .contact-bottom .form .cta {
+        width: 70%;
+    }
+    #contact .contact-bottom .contact-bottom-right h2{
+        font-size: 4rem;
+    }
+    #contact .contact-bottom .contact-bottom-left{
+        flex: 70%;
+    }
+    #contact .contact-bottom .contact-bottom-right{
+        margin-top: 45px;
+        flex: 30%;
+        color: white;
+        top: 50%;
+    }
+    #contact .contact-bottom .error-para{
+        color: red;
+        width: 500px;
+        height: 20px;
+        margin-bottom: 10px;
     }
     /*Start Footer Section*/
 

@@ -46,7 +46,7 @@ p {
     padding: 10px 30px;
     color: white;
     background-color: transparent;
-    border: 2px solid crimson;
+    border: 1px solid rgba(220, 20, 60, 0.2);
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -96,19 +96,19 @@ label{
     margin-bottom: 10px;
 }
 input:focus{
-    outline: solid #948080 4px;
+    outline: solid #9480805e 3px;
     transition: .2s ease outline; 
 }
 input.active{
-    outline: solid red 2px;
+    outline: solid rgba(255, 0, 0, 0.8) 2px;
     transition: .2s ease outline; 
 }
 textarea:focus{
-    outline: solid #948080 4px;
+    outline: solid #9480805e 3px;
     transition: .2s ease outline; 
 }
 textarea.active{
-    outline: solid red 2px;
+    outline: solid rgba(255, 0, 0, 0.8) 2px;
     transition: .2s ease outline; 
 }
 .error-para{
