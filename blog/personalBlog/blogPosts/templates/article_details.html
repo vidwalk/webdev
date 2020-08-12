@@ -7,9 +7,8 @@
 
 
 <h1>{{post.title}}</h1>
-
-<h4>By: {{post.author.first_name}}</h4>
-
+<a class="nav-link" href="{% url 'update_post' post.pk %}">Edit Post</a>
+<a class="nav-link" href="{% url 'delete_post' post.pk %}">Delete Post</a>
 <br/>
 
 {{post.body}}
