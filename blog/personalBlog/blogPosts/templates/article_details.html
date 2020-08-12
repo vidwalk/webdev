@@ -7,11 +7,10 @@
 
 
 <h1>{{post.title}}</h1>
-<a class="nav-link" href="{% url 'update_post' post.pk %}">Edit Post</a>
-<a class="nav-link" href="{% url 'delete_post' post.pk %}">Delete Post</a>
+<h4>{{post.post_date}}</h4>
 <br/>
 
-{{post.body}}
+{{post.body|safe}}
 
 <br/><br/>
 

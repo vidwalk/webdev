@@ -4,9 +4,11 @@
 <h1>Posts</h1>
 <ul>
     {% for post in object_list %}
-    <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a> 
-            <a class="nav-link"href="{% url 'update_post' post.pk %}">Edit Post</a> 
-            <a class="nav-link" href="{% url 'delete_post' post.pk %}">Delete Post</a><br /></li>
+    
+    <li><a href="{% url 'article-detail' post.pk %}">{{post.title}}</a> {{post.post_date}}
+
+   
+        
     {%endfor%}
 </ul>
 
