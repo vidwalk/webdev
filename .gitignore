@@ -352,3 +352,6 @@ MigrationBackup/
 # Django Settings
 blog/blogEnv/
 settings.py
+
+# Pelican blog
+Pelican/PelBlog
