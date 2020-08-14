@@ -1,5 +1,5 @@
-Title: Contact
-Slug: contact
-Summary: Short version for index and feeds
+Title:Contact
+Slug:contact
+Date: 2020-08-13
+Template: contact
 
-This is the content of my super blog post.
