@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Claudiu Rediu'
-SITENAME = 'ClaudDev'
+SITENAME = 'ClawDev'
 SITEURL = ''
 
 PATH = 'content'
@@ -20,10 +20,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
+'''LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('You can modify those links in your config file', '#'),)'''
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/claudiusrediu'),
@@ -37,7 +37,7 @@ DEFAULT_PAGINATION = False
 
 THEME = 'themes'
 
-PROFILE_IMAGE = 'xp.jpg'
+PROFILE_IMAGE = 'LionwallpaperOwn.png'
 
 #using our own defined color theme
 COLOR_THEME = '0g'
