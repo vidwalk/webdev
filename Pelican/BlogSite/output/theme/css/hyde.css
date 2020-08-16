@@ -314,17 +314,18 @@ a.sidebar-social-item.active:focus {
   background-color: #272343;
 }
 
-.theme-base-0g .content a,
-.theme-base-0g .related-posts li a:hover {
-  color: #272343;
-}
-
 .theme-base-0g .read-more, .theme-base-0g .read-more-button {
   border-color: #ffd803;
 }
+
+.theme-base-0g .content a,
+.theme-base-0g .related-posts li a:hover {
+  color: #280090;
+}
 .theme-base-0g .page-title,
 .theme-base-0g .post-title,
-.theme-base-0g .post-title a {
+.theme-base-0g .post-title a,
+.theme-base-0g a.read-more {
   color: #2d334a;
 }
 
@@ -348,4 +349,7 @@ a.sidebar-social-item.active:focus {
 .theme-base-0g .posts h6 {
   color: #272343;
 }
-
+/* Shoelace */
+.theme-base-0g sl-details::part(base){
+  border: 1px solid #ffd803;
+  }
