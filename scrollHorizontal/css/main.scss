@@ -1,0 +1,155 @@
+.container {
+  width: 600%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.panel {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: left;
+  justify-content: left;
+  -webkit-box-align: left;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: left;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+
+
+  h1 {
+
+    font-size: 1.8em;
+    color: white;
+    padding-left: 140px;
+  }
+
+  p,
+  li {
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 0.3em 0 1em 0;
+  }
+
+  p strong,
+  li strong {
+    color: white;
+    font-weight: 400;
+  }
+
+  p code,
+  li code {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 2px 4px;
+    border-radius: 5px;
+  }
+
+  li {
+    margin: 0;
+  }
+}
+
+.one {
+  background-image: url(/images/one.jpg);
+  background-size: cover;
+}
+
+.two {
+  background-image: url(/images/two.jpg);
+  background-size: cover;
+}
+
+.three {
+  background-image: url(/images/three.jpg);
+  background-size: cover;
+}
+
+.four {
+  background-image: url(/images/four.jpg);
+  background-size: cover;
+}
+
+.voila {
+  background-image: url(/images/voila.png);
+  background-size: cover;
+}
+
+.blue {
+  background-image: url(/images/main.jpg);
+  background-size: cover;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  font-family: "Quicksand", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font: "Quicksand";
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+p,
+li {
+  padding-bottom: 400px;
+  padding-left: 10px;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 6px 10px 10px 10px;
+  border-bottom-right-radius: 26px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* HEADINGS */
+.header-section {
+  padding: 0 15px;
+  text-align: center;
+  margin: 40vh auto 50vh;
+}
+
+/* SCROLL DOWN */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  overflow: visible;
+  color: white;
+
+  .arrow {
+    position: relative;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAABmJLR0QA/wD/AP+gvaeTAAABl0lEQVR4nO3U0U3DQBCE4TWiBSKoJ50T0QBEogeKYHixJXLYIet1fGvf/72HXIadMQMAAECLutoPkKTI57uuq/obHmp++R481n7AwHtJ0ctdChcYlC5ASW+STrXfcat0AZrZt5mlqOcmqLfW55aW8QI3JV2AbGAcG+jBBjYuXYBsYBwb6MEGNi5dgGxgHBvowQY2Ll2AbGAcG+jBBjYuXYBsYBwb6MEGNi5dgGxgHBvowQY2Ll2AbGAcG+jBBjYuXYBsYBwb6MEGNi4UoKSDpA8FjPxN1wZGvrt/+yGSQSjAruu+zOxoZufI3ymstYFnMzv2v6EuSU+S3vv/6qekl9pvKo288bn2my5kDjF9eANdbuKfffHu2xpvSufagyWdJL1meEtqGeq8mdpOqVnnzV5eqUaddxPeYM06b762U9ao8+4ur3TPOu8+vME96rzb2k5Zss7NXF5piTo3G94gUufmajtlTp2bv7ySp86EN+GWOlPbf1wLkfBuNBYi4TmN7Byb51VcHZc3x68QCW+uvs7UFgAAYHk/Um61bjk770wAAAAASUVORK5CYII=);
+    background-size: contain;
+  }
+}
