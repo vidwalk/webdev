@@ -15,14 +15,6 @@ gsap.to(sections, {
     }
 });
 
-gsap.utils.toArray('.gun').forEach((el, i) => {
-    gsap.from(el, {
-        x: "100",
-        duration: 2,
-        opacity: 0,
-        scrollTrigger: {
-            trigger: "el",
-            start: (i + 1) * window.innerWidth,//get innerwidth of the section to start the animation at the right time
-        }
-    });
-});
+
+
+fitty('.text-fit')

@@ -35,7 +35,7 @@
 .panel h1 {
   font-size: 1.8em;
   color: white;
-  padding-left: 140px;
+  padding-left: 2.5em;
 }
 
 .panel p,
@@ -114,8 +114,11 @@ h1,
 h2,
 p,
 li {
-  padding-bottom: 400px;
-  padding-left: 10px;
+  padding-bottom: 8em;
+}
+
+.description h1 {
+  padding-left: 0;
 }
 
 /* HEADER */
