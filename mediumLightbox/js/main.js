@@ -1,0 +1,1 @@
+MediumLightbox('figure.zoom-effect');
