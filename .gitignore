@@ -355,3 +355,4 @@ settings.py
 
 # Pelican blog
 Pelican/PelBlog
+/node_modules
