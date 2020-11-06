@@ -1,0 +1,81 @@
+<nav>
+  <a (click)="getForecastReports()">Refresh</a>
+  <a (click)="getHorsens()">Horsens</a>
+  <a (click)="getAarhus()">Aarhus</a>
+  <a (click)="getCopenhagen()">Copenhagen</a>
+</nav>
+<div class="DateInput">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+      <input matStartDate formControlName="start" placeholder="Start date" [formControl]="tommorow">
+      <input matEndDate formControlName="end" placeholder="End date" [formControl]="date">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+
+    <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+    <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+  </mat-form-field>
+  <p>Press on refresh or city after a new date range is picked</p>
+</div>
+<div class="row">
+  <div class="column">
+    <h1>Temperature</h1>
+    <ul class="weatherReports">
+      <li *ngFor="let temperature of temperatures">
+        <h2>{{temperature.place}}</h2>
+        <div><span>from: </span>{{temperature.from}}</div>
+        <div><span>to: </span>{{temperature.to}}</div>
+        <div><span>unit: </span>{{temperature.unit}}</div>
+        <div><span>time: </span>{{temperature.time}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="column">
+    <h1>Precipitation</h1>
+    <ul class="weatherReports">
+      <li *ngFor="let precipitation of precipitations">
+        <h2>{{precipitation.place}} </h2>
+        <div><span>precipitation types: </span>
+          <ul style="list-style-type: none;">
+            <li *ngFor="let type of precipitation.precipitation_types">{{ type }}</li>
+          </ul>
+        </div>
+        <div><span>from: </span>{{precipitation.from}}</div>
+        <div><span>to: </span>{{precipitation.to}}</div>
+        <div><span>unit: </span>{{precipitation.unit}}</div>
+        <div><span>time: </span>{{precipitation.time}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="column">
+    <h1>Wind Speed</h1>
+    <ul class="weatherReports">
+      <li *ngFor="let windspeed of windspeeds">
+        <h2>{{windspeed.place}} </h2>
+        <div><span>directions:</span>
+          <ul style="list-style-type: none;">
+            <li *ngFor="let type of windspeed.directions">{{ type }}</li>
+          </ul>
+        </div>
+        <div><span>from: </span>{{windspeed.from}}</div>
+        <div><span>to: </span>{{windspeed.to}}</div>
+        <div><span>unit: </span>{{windspeed.unit}}</div>
+        <div><span>time: </span>{{windspeed.time}}</div>
+      </li>
+    </ul>
+  </div>
+  <div class="column">
+    <h1>Cloud Coverage</h1>
+    <ul class="weatherReports">
+      <li *ngFor="let cloudcoverage of cloudcoverages">
+        <h2>{{cloudcoverage.place}}</h2>
+        <div><span>from: </span>{{cloudcoverage.from}}</div>
+        <div><span>to: </span>{{cloudcoverage.to}}</div>
+        <div><span>unit: </span>{{cloudcoverage.unit}}</div>
+        <div><span>time: </span>{{cloudcoverage.time}}</div>
+      </li>
+    </ul>
+  </div>
+</div>

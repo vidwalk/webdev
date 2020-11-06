@@ -1,0 +1,52 @@
+/* temperaturesComponent's private CSS styles */
+.weatherReports {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  width: 20em;
+  padding-left: 2em;
+}
+
+.DateInput {
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-left: 1.25em;
+}
+
+a {
+  padding: 5px 10px;
+  margin-left: 2em;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+a:link {
+  color: #334953;
+}
+
+a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+
+a.active {
+  color: #039be5;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
