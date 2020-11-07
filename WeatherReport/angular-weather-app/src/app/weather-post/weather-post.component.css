@@ -1,0 +1,34 @@
+label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 10vw;
+  text-align: right;
+}
+
+input {
+  display: inline-block;
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.post {
+  display: table-cell;
+  vertical-align: middle;
+
+}
+
+.addWeather {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 15vw;
+  text-align: right;
+}
+
+.addWeather button {
+  width: 4.25em;
+}

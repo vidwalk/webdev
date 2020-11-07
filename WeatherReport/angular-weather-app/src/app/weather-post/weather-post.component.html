@@ -1,0 +1,34 @@
+<div class="post"><div >
+  <ul>
+    <li><label>Weather Type:</label>
+        <input #weatherType />
+      </li>
+    <li><label>Weather Place:</label>
+        <input #weatherPlace />
+      </li>
+    <li><label>Weather Unit:</label>
+        <input #weatherUnit />
+      </li>
+    <li><label>Weather Value:</label>
+        <input #weatherValue />
+      </li>
+    <li><label>Weather Time:</label>
+        <input #weatherTime />
+      </li>
+    <li><label>Weather Precipitation Type:</label>
+        <input #weatherPrecType />
+      </li>
+    <li><label>Weather Wind Direction:</label>
+        <input #weatherWindDirec />
+      </li>
+  </ul>
+</div>
+
+<div class = "addWeather">
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button
+    (click)="add(weatherValue.value,weatherType.value,weatherUnit.value,weatherTime.value,weatherPlace.value,weatherPrecType.value,weatherWindDirec.value)">
+    add
+  </button>
+</div>
+</div>

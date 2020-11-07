@@ -25,8 +25,10 @@ export class WeatherComponent implements OnInit {
 
     this.getWeatherReports();
   }
+
   getWeatherReports(): void {
     this.weatherService.getWeather().subscribe(weatherReports => {
+      weatherReports = weatherReports.sort((a, b) => { return a.time > b.time ? 1 : -1 });
       weatherReports = weatherReports.filter(weatherReports => ((new Date(this.range.value.start) < new Date(weatherReports.time)) && (new Date(weatherReports.time) < new Date(this.range.value.end))));
       this.temperatures = weatherReports.filter(weatherReports => weatherReports.type === 'temperature');
       this.precipitations = weatherReports.filter(weatherReports => weatherReports.type === 'precipitation');
@@ -36,6 +38,7 @@ export class WeatherComponent implements OnInit {
   }
   getHorsens(): void {
     this.weatherService.getWeather().subscribe(weatherReports => {
+      weatherReports = weatherReports.sort((a, b) => { return a.time > b.time ? 1 : -1 });
       weatherReports = weatherReports.filter(weatherReports => ((new Date(this.range.value.start) < new Date(weatherReports.time)) && (new Date(weatherReports.time) < new Date(this.range.value.end))));
       weatherReports = weatherReports.filter(weatherReports => weatherReports.place === 'Horsens')
       this.temperatures = weatherReports.filter(weatherReports => weatherReports.type === 'temperature');
@@ -46,6 +49,7 @@ export class WeatherComponent implements OnInit {
   }
   getAarhus(): void {
     this.weatherService.getWeather().subscribe(weatherReports => {
+      weatherReports = weatherReports.sort((a, b) => { return a.time > b.time ? 1 : -1 });
       weatherReports = weatherReports.filter(weatherReports => ((new Date(this.range.value.start) < new Date(weatherReports.time)) && (new Date(weatherReports.time) < new Date(this.range.value.end))));
       weatherReports = weatherReports.filter(weatherReports => weatherReports.place === 'Aarhus')
       this.temperatures = weatherReports.filter(weatherReports => weatherReports.type === 'temperature');
@@ -56,6 +60,7 @@ export class WeatherComponent implements OnInit {
   }
   getCopenhagen(): void {
     this.weatherService.getWeather().subscribe(weatherReports => {
+      weatherReports = weatherReports.sort((a, b) => { return a.time > b.time ? 1 : -1 });
       weatherReports = weatherReports.filter(weatherReports => ((new Date(this.range.value.start) < new Date(weatherReports.time)) && (new Date(weatherReports.time) < new Date(this.range.value.end))));
       weatherReports = weatherReports.filter(weatherReports => weatherReports.place === 'Copenhagen')
       this.temperatures = weatherReports.filter(weatherReports => weatherReports.type === 'temperature');

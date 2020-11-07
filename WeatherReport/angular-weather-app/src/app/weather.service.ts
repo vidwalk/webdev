@@ -10,6 +10,9 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class WeatherService {
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
   private weatherUrl = 'http://localhost:8080/data';  // URL to web api
   private forecastUrl = 'http://localhost:8080/forecast'
   constructor(
@@ -31,6 +34,12 @@ export class WeatherService {
       );
   }
 
+  postWeather(weather: Weather): Observable<Weather> {
+    return this.http.post<Weather>(this.weatherUrl, weather, this.httpOptions).pipe(
+      tap((newWeather: Weather) => this.log("added weather w/ type=${newWeather.type}")),
+      catchError(this.handleError<Weather>('postWeather'))
+    );
+  }
   /**
  * Handle Http operation that failed.
  * Let the app continue.

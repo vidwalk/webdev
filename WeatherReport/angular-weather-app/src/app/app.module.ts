@@ -13,12 +13,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WeatherPostComponent } from './weather-post/weather-post.component';
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     MessagesComponent,
-    ForecastComponent
+    ForecastComponent,
+    WeatherPostComponent
   ],
   imports: [
     BrowserModule,
